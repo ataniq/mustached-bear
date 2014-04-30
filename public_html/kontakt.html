@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <title>eine schöne beispielseite</title>
+        <meta charset="utf-8">   
+        <meta name="viewport" content="width=device-width"><!--was macht das hier???-->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <h1>eine beispielseite</h1>
+               
+                <a id='oben' /
+                
+                <ul>
+                    <li><a href=index.html>home</a></li><!--hier nur ein # damit die seite nicht unnötig neu lädt-->
+                    <li><a href="#">kontakt</a></li>
+                    <li><a href="http://www.soundcloud.com" target="blank">soundcloud</a></li><!--link in einem neuen Fenster-->
+                    <li><a href="index.html#unten">unten</a></li><!--hier wird nach unten auf der indexhtml verlinkt-->
+                    <li><a href="tabelle.html">tabelle</a></li>
+                </ul>
+            </div>
+
+            <hr />
+            
+            <div >
+                <form action=""><!--das zusammenhaltende tag fürs formularfeld ...hier kommt später die Übergabe an php rein - dies passiert mit php
+                                UNSICHER WÄRE ES HIER MAILTO ZU BENUTZEN, SPAM!!!-->
+                    <label for=firstname">Vorname:</label> <!--beschriftung fürs formularfeld-->
+                    <input id="firstname" type="text" name="firstname" placeholder="Vorname"    /> <!--durch for und firstname, weiß der browser das lable und input zusammen gehören. ein klick aufs label führt häufig direkt ins feld-->
+                    
+                    <label for=lasttname">Name:</label> 
+                    <input id="lasttname" type="text" name="firstname" placeholder="Name" maxlength="60"/> <!--MAXLENGTH definiert die maximal mögliche länge des eingabewertes-->
+                    <label for=email">email:</label> 
+                    
+                    <br/>
+                    
+                    
+                    <!--checkbox - können einzeln angeklickt werden-->
+                    
+                    <input type="checkbox" name="hobby1" id="hobby1" value="lesen"/>Lesen<br/><!--value ist der wert der übergeben wird-->
+                    <input type="checkbox" name="hobby2" id="hobby2" value="reiten" checked="checked"/>Reiten<br/><!--checked trifft eine vorauswahl für den user-->
+                    <input type="checkbox" name="hobby3" id="hobby3" value="tanzen"/>Tanzen<br/>
+                    
+                    
+                    <!--radio-button - nur einer kann angeklickt werden-->
+                    
+                   <input type="radio" name="anreise" id="anreise1" value="auto"/>
+                   <label for="anreise1">per auto</label><br/>
+                   <input type="radio" name="anreise" id="anreise2" value="auto"/>
+                   <label for="anreise2">per Bahn</label><br/>
+                   <input type="radio" name="anreise" id="anreise3" value="auto"/>
+                   <label for="anreise3">per Flugzeug</label><br/>
+                   
+                   
+                   <select name="lieblingsfarbe" id="lieblingsfarbe" >
+                    <option value="1">rot</option><!--value wichtig damit wert übergeben wird-->
+                    <option value="2">grün</option>
+                    <option value="3">blau</option>           
+                    <option value="4">gelb</option>
+                    <option value="5">blau</option>           
+                    <option value="6">gelb</option>
+                   </select>
+                   
+                     <br/>
+                   
+                   <select name="lieblingsfarbe" id="lieblingsfarbe" multiple="multiple"><!--mit multiple können mehrere elemente ausgewählt werden - hier geht kein dropdown!!-->
+                    <option>rot</option>
+                    <option>grün</option>
+                    <option>blau</option>           
+                    <option>gelb</option>
+                    <option>blau</option>           
+                    <option>gelb</option>
+                   </select>
+                   
+                   <br/>
+                   
+                   <select name="lieblingsfarbe" id="lieblingsfarbe" size="5"><!--size macht ein scrollrand-->
+                    <option>rot</option>
+                    <option selected>grün</option><!--selected--das element ist ausgewählt-->
+                    <option>blau</option>           
+                    <option>gelb</option>
+                    <option>blau</option>           
+                    <option>gelb</option>
+                   </select>
+                   
+                   <br/>
+                   
+                   <select name="lieblingsfarbe" id="lieblingsfarbe" >
+                       <optgroup label="Farben"><!überschriften im menü-->
+                            <option>rot</option>
+                            <option selected>grün</option><!--selected--das element ist ausgewählt-->
+                            <option>blau</option>           
+                            <option>gelb</option>
+                            <option>blau</option>           
+                            <option>gelb</option>
+                        </optgroup>
+                        <optgroup label="Länder">
+                            <option>DE</option>
+                            <option selected>BLK</option><!--selected--das element ist ausgewählt-->
+                            <option>ENG</option>           
+                            <option>RUS</option>
+                            
+                        </optgroup>
+                       
+                   </select>
+                   
+                   
+                    <br/>
+                   <!-- INPUT -->
+                   
+                    <input id="email" type="email" name="firstname" placeholder="bhobbarker@bobmail.com"/><!--neuer typ für email in html5:  wichtig für eine sätere validierung!-->
+                    
+                    <br/>
+                    
+                    <textarea placeholder="Ihre Nachricht an Mich"></textarea><!--zwischen diesen beiden tags sollte lieber NICHTS stehen, sonst steht es schon im Textfeld-->
+                    
+                      <br/>
+                    
+                      <textarea name="textfeld" id="textfeld2" cols="32" rows="20" <!--ist nicht so responsive-dafür muss css rann--> placeholder="Ihre Nachricht an Mich"></textarea>
+                     <br/>
+                    
+                     <input type="file" name="upload" id="upload1" accept="image/*" />  <!--wildcard zeichen * -- alle Bildformate sind zugelassen!! -- VORSICHT auch über lassen sich Viren einaschleusen, oder das uheberrecht verletzen!!!--> 
+                     
+                     
+                    <input type="submit" value="senden"/>
+                    
+                    <br/>
+                    
+                 
+                    
+                   
+                   <!--<button type="submit">Senden</button> alternative zu input-->
+                
+                
+                
+                </form>
+                
+                
+                
+            </div>
+            
+        </div>
+
+     </body>
+  
+</html>

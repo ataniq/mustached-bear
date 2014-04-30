@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>iframe</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="refresh" content="5:url=http://www.webmasters-europe.org"> <!--leietet nach 5 sekunden weiter-->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <div id="wrapper"
+                <ul>
+                    <li><a href=#>home</a></li><!--hier nur ein # damit die seite nicht unnötig neu lädt-->
+                    <li><a href="kontakt.html">kontakt</a></li>
+                    <li><a href="http://www.soundcloud.com" target="blank">soundcloud</a></li><!--link in einem neuen Fenster-->
+                    <li><a href="#unten">unten</a></li><!--hier wird nach unten verlinkt-->
+                    <li><a href="tabelle.html">tabelle</a></li>
+                    <li><a href="iframe.html">iframe</a></li>
+                </ul>
+        <!-- IFRAME -- einbinden von YOUTUBE-VIDEOS ; TWITTER ; FACEBOOK :::--->
+             <div>
+                 <p>
+                     <a href="http://de.wikipedia.org/wiki/bauhaus" target="wikifenster">Bauhaus</a>
+                     <a href="http://de.wikipedia.org/wiki/Klassizismus" target="wikifenster">Klassizismus</a>
+                 </p>
+                 <iframe src="http://de.wikipedia.org" width="800" height="600" name="wikifenster">
+                 <p>ihr browser konnte das iframe leider nicht anzeigen</p><!-- fallback falls der browser es nicht anzeigen kann!!-->
+                 </iframe>
+         
+             
+            </div>
+        
+        <!-- DER VIDEO TAG-->
+        <div>
+            <!--<video src="bunny.mp4" width="""720" height="300"></video>  wird nur ein videoformat angegeben-->
+            <video width="720" height="300" controls="controls" poster="images/koala.jpg"> <!--autoplay="autoplay"autatischer start  // loop="loop" - ein loop // poster="images/panda.jpeg" - bilder am start // preload="none"-->
+                <source src="bunny.mp4" type="video/mp4"/>
+                <source src="bunny.webm" type="video/webm"/>
+                <source src="bunny.ogv" type="video/ogg"/><!-- achtung: bei ogg und ogv-->
+                <img src="images/koala.jpg" alt="koala"/>
+           </video>
+            
+          
+        </div>
+        
+        
+        <!--DAS Audio tag-->
+        
+        <div>
+            <audio controls="controls" <!--autoplay="autoplay"-->> <!-- ohne controls spielt permanent eine nervige hintergrund musik-->
+            <source src="sound.mp3" type="audio/mp3"/>
+                <p>leider nix datei</p>   
+            </audio>
+         </div>
+        
+        
+        </div>
+    </body>
+</html>
